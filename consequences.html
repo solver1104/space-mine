@@ -1,183 +1,246 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8"/>
-  <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon.png" type="image/png" sizes="16x16">
   <style>
-   * {
-    box-sizing:border-box;
-    margin: 0;
-   }
-   .button{
-    background-color:white;
-    color:green;
-    border: 2px solid green;
-    text-align:center;
-    font-size:20px;
-    transition-duration:0.8s;
-    padding: 16px 32px;
-    float:left;
-    border-radius:4px;
-    margin: 4px 104px;
-   }
-   
-   .button:hover{
-    background-color:green;
-    color:white;
-    cursor:pointer;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    border-radius:16px;
-   }
-   .button:active{
-    border:2px solid black;
-    background-color:black;
-   }
-   .button:active:after{
-    border:2px solid green;
-   }
-   .button-show{
-    background-color:blue;
-    color:white;
-    border: 2px solid blue;
-    text-align:center;
-    font-size:20px;
-    padding: 16px 32px;
-    float:left;
-    border-radius:4px;
-    margin: 4px 104px;
-   }
-   .header {
-    background-position: center center;
-    background-size: cover;
-    background-image: url('asteroid.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 297px;
-    text-align: center;
-    color: white;
-    font-size: 108px;
-   }
-   .subheader {
-    font-size: 60px;
-   }
-   .paragraphline {
-    font-size:24px;
-   }
-   .navbar{
-    overflow: hidden;
-    padding: 10px;
-    background: #CDCDCD;
-    position: fixed;
-    top: 0;
-    width: 100%;
-   }
-   .imgbox {
-   	color: white;
-    border: 2px dashed white;
-    font-size: 30px;
-    text-align: center;
-    padding: 5px;
-   }
-   body {
-   	background: url('bg.jpg') no-repeat center;
-    background-size: cover;
-   }
-   div.column1 {
-    float: left;
-    width: 50%;
-    padding: 50px;
-    font-size: 28px;
-    background-color: rgba(255,255,255,0);
-    color: white;
-   }
-   div.column2 {
-    float:left;
-    width: 25%;
-    padding: 10px;
-   }
-   .largetext {
-    font-size: 60px;
-    text-align: center;
-    border: 2px solid white;
-    color: white;
-   }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      font-family: "Segoe UI Light", sans-serif;
+    }
+
+    .button {
+      background-color: white;
+      color: green;
+      border: 2px solid green;
+      text-align: center;
+      font-size: 20px;
+      transition-duration: 0.8s;
+      padding: 16px 32px;
+      float: left;
+      border-radius: 4px;
+      margin: 4px 104px;
+    }
+
+    .button:hover {
+      background-color: green;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      border-radius: 16px;
+    }
+
+    .button:active {
+      border: 2px solid black;
+      background-color: black;
+    }
+
+    .title {
+      font-family: "Segoe UI Black", sans-serif;
+      font-size: 108px;
+    }
+
+    .bbbg {
+      margin: 113px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 32px;
+      padding: 10px;
+    }
+
+    .button:active:after {
+      border: 2px solid green;
+    }
+
+    .button-show {
+      background-color: blue;
+      color: white;
+      border: 2px solid blue;
+      text-align: center;
+      font-size: 20px;
+      padding: 16px 32px;
+      float: left;
+      border-radius: 4px;
+      margin: 4px 104px;
+    }
+
+    .header {
+      background-position: center center;
+      background-size: cover;
+      background-image: url('./asteroid.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 233px 0px;
+      text-align: center;
+      color: white;
+    }
+
+    .subheader {
+      font-size: 60px;
+    }
+
+    .paragraphline {
+      font-size: 24px;
+    }
+
+    .navbar {
+      overflow: hidden;
+      padding: 10px;
+      background: #CDCDCD;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    .imgbox {
+      color: rgb(38, 119, 13);
+      border: 2px dashed rgb(38, 119, 13);
+      border-radius: 8px;
+      font-size: 20px;
+      font-family: "Segoe UI";
+      font-style: italic;
+      text-align: center;
+      padding: 10px;
+      background: rgba(38, 119, 13, 0.1);
+    }
+
+    body {
+      background: url('./bg.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    div.column1 {
+      float: left;
+      width: 50%;
+      padding: 50px;
+      font-size: 28px;
+      background-color: rgba(255, 255, 255, 0);
+      color: white;
+    }
+
+    div.column2 {
+      float: left;
+      width: 25%;
+      padding: 10px;
+    }
+
+    .largetext {
+      font-family: "Segoe UI Semibold", sans-serif;
+      font-size: 60px;
+      text-align: center;
+      border: 2px solid rgba(0, 132, 255);
+      border-radius: 32px;
+      color: rgba(0, 132, 255);
+      padding: 10px;
+      background-color: rgba(0, 132, 255, 0.1);
+    }
   </style>
   <title>
-   MRRM Consequences
+    MRRM Consequences
   </title>
- </head>
- <body>
-  <div class = "navbar">
-   <a href = "https://space-mine.herokuapp.com/abstract.html"><button class = "button">Abstract</button></a>
-   <a href = "https://space-mine.herokuapp.com/future-tech.html"><button class = "button">Future Tech</button></a>
-   <a href = "https://space-mine.herokuapp.com/model.html"><button class = "button">Model</button></a>
-   <a href = "https://space-mine.herokuapp.com/breakthroughs.html"><button class = "button">Breakthroughs</button></a>
-   <a href = "https://space-mine.herokuapp.com/consequences.html"><button class = "button-show">Consequences</button></a>
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="./abstract.html"><button class="button">Abstract</button></a>
+    <a href="./future-tech.html"><button class="button">Future Tech</button></a>
+    <a href="./model.html"><button class="button">Model</button></a>
+    <a href="./breakthroughs.html"><button class="button">Breakthroughs</button></a>
+    <a href="./consequences.html"><button class="button-show">Consequences</button></a>
   </div>
-  <div class = "header">
-   <p>
-    Mining: A Futuristic Approach
-   </p>
-   <p class = "paragraphline">------------------------------------------------------------------------</p>
-   <p class = "subheader">Consequences</p>
+  <div class="header">
+    <div class="bbbg">
+      <p class="title">
+        Mining: A Futuristic Approach
+      </p>
+      <p class="paragraphline">———————————————————————————————————————————————————————————————————</p>
+      <p class="subheader">Consequences</p>
+    </div>
   </div>
-  <div class = "background">
-    <div class = "column2">
+  <div class="background">
+    <div class="column2">
 
     </div>
 
-      <div class = "column1">
-       <div class = "largetext">TL;DR</div>
-       <div class = "paragraphline">
-       <br></br>
-       Our idea could potentially cause economic problems and collapse as well as several political issues. However, it would improve current mining methods by being safer for humans, more environmentally friendly, and more efficient, and also open up opportunities for the advancement of the human race through a large infrastructure of robots and a huge amount of resources
-       <br></br>
-       </div>   
-       <div class = "largetext">Con: Economic Problems</div>
-       <div class = "paragraphline">
-       <br></br>
-MRRM would render people working in the mining industry jobless. Because of the sudden price drop of minerals, the commodities market could plummet, and adjusting to this new economy would even cause people outside of the mining industry to struggle financially. In the short run, MRRM could cause global economies could enter a depression.
-<br></br>
- </div>
-<div class = "largetext">Con: Political Issues</div>
-<div class = "paragraphline">
- <br></br>
-Since the initial construction of MRRM would be a massive project, contributions for materials, energy, and workers would need to be divided among multiple nations. Once the technology is implemented and starts to ship minerals mined from the asteroids back to Earth, there could be conflicts among nations involving the ownership of these resources. If these conflicts are not settled properly, they could possibly lead to an international war.
-<br></br>
-</div>
-<div class = "largetext">Pro: Improvement Upon Current Mining Methods</div>
-<div class = "paragraphline">
- <br></br>
-Our technology would eliminate almost all environmental and safety concerns of current mining methods. In the most popular mining methods such as open pit mining and underground mining, harmful substances from the mined rock are exposed to the environment, contaminating air and water sources. Habitat destruction at mining sites and the carbon emissions of mining machines are also environmental issues caused by mining. MRRM would not have these downsides; the harmful substances emitted from minerals, as well as the carbon emissions of our robots, would be released into outer space, where they have no environmental impact on earth. The health risks of working as a miner, such as hearing loss and exposure to dangerous substances, are also nonexistent in our technology, since robots would perform these dangerous-to-human activities instead.
-<br></br>
-</div>
-<div class = "largetext">Pro: Space Advancement</div>
-<div class = "paragraphline">
- <br></br>
-Throughout the course of human history, there have been many radical advancements that have redefined the way that humans live. For example, the invention of computers has created many possibilities for humans that were unimaginable in the past. Making this advancement to space will have the same impact. Eventually, humans will suffer overpopulation issues, which will be entirely solved by colonizing other planets. Our technology could contribute to space advancement in two ways - it would provide us with enough resources to undertake large-scale projects, and it could deploy robots to desired planets, to build shelters which humans could move into immediately. It would also spread awareness for the potential of space exploration.
-</div>
-</div>
-    <div class = "column2">
-     <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-     <div class = "imgbox">
-      <img src = "jobs.jpg" alt = "Jobs lost" style = "width: 100%;">
-      The stock market crashing after mining jobs are lost
-     </div>
-     <div class = "imgbox">
-      <img src = "argue.jpg" alt = "Politicians Arguing" style = "width: 100%;">
-      Politicians arguing over collaboration
-     </div>
-     <div class = "imgbox">
-      <img src = "clean.jpg" alt = "Clean mining" style = "width: 100%;">
-      MRRM is a viable clean mining opportunity
-     </div>
-<br></br><br></br>
-     <div class = "imgbox">
-      <img src = "futuristiccity.jpg" alt = "An Artist's Depiction of a Futuristic City" style = "width: 100%;">
-      MRRM advances our civilization greatly.
-     </div>
+    <div class="column1">
+      <div class="largetext">TL;DR</div>
+      <div class="paragraphline">
+        <br></br>
+        Our idea could potentially cause economic problems and collapse as well as several political issues. However, it
+        would improve current mining methods by being safer for humans, more environmentally friendly, and more
+        efficient, and also open up opportunities for the advancement of the human race through a large infrastructure
+        of robots and a huge amount of resources
+        <br></br>
+      </div>
+      <div class="largetext">Con: Economic Problems</div>
+      <div class="paragraphline">
+        <br></br>
+        MRRM would render people working in the mining industry jobless. Because of the sudden price drop of minerals,
+        the commodities market could plummet, and adjusting to this new economy would even cause people outside of the
+        mining industry to struggle financially. In the short run, MRRM could cause global economies could enter a
+        depression.
+        <br></br>
+      </div>
+      <div class="largetext">Con: Political Issues</div>
+      <div class="paragraphline">
+        <br></br>
+        Since the initial construction of MRRM would be a massive project, contributions for materials, energy, and
+        workers would need to be divided among multiple nations. Once the technology is implemented and starts to ship
+        minerals mined from the asteroids back to Earth, there could be conflicts among nations involving the ownership
+        of these resources. If these conflicts are not settled properly, they could possibly lead to an international
+        war.
+        <br></br>
+      </div>
+      <div class="largetext">Pro: Improvement Upon Current Mining Methods</div>
+      <div class="paragraphline">
+        <br></br>
+        Our technology would eliminate almost all environmental and safety concerns of current mining methods. In the
+        most popular mining methods such as open pit mining and underground mining, harmful substances from the mined
+        rock are exposed to the environment, contaminating air and water sources. Habitat destruction at mining sites
+        and the carbon emissions of mining machines are also environmental issues caused by mining. MRRM would not have
+        these downsides; the harmful substances emitted from minerals, as well as the carbon emissions of our robots,
+        would be released into outer space, where they have no environmental impact on earth. The health risks of
+        working as a miner, such as hearing loss and exposure to dangerous substances, are also nonexistent in our
+        technology, since robots would perform these dangerous-to-human activities instead.
+        <br></br>
+      </div>
+      <div class="largetext">Pro: Space Advancement</div>
+      <div class="paragraphline">
+        <br></br>
+        Throughout the course of human history, there have been many radical advancements that have redefined the way
+        that humans live. For example, the invention of computers has created many possibilities for humans that were
+        unimaginable in the past. Making this advancement to space will have the same impact. Eventually, humans will
+        suffer overpopulation issues, which will be entirely solved by colonizing other planets. Our technology could
+        contribute to space advancement in two ways - it would provide us with enough resources to undertake large-scale
+        projects, and it could deploy robots to desired planets, to build shelters which humans could move into
+        immediately. It would also spread awareness for the potential of space exploration.
+      </div>
     </div>
-     
+    <div class="column2">
+      <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+      <div class="imgbox">
+        <img src="./jobs.jpg" alt="Jobs lost" style="width: 100%;">
+        The stock market crashing after mining jobs are lost
+      </div>
+      <br></br><br></br>
+      <div class="imgbox">
+        <img src="./argue.jpg" alt="Politicians Arguing" style="width: 100%;">
+        Politicians arguing over collaboration
+      </div>
+      <br></br><br></br>
+      <div class="imgbox">
+        <img src="./clean.jpg" alt="Clean mining" style="width: 100%;">
+        MRRM is a viable clean mining opportunity
+      </div>
+      <br></br><br></br><br></br><br></br><br></br>
+      <div class="imgbox">
+        <img src="./futuristiccity.jpg" alt="An Artist's Depiction of a Futuristic City" style="width: 100%;">
+        MRRM advances our civilization greatly.
+      </div>
+    </div>
+
   </div>
- </body>
+</body>
+
 </html>
